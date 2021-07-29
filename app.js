@@ -7,7 +7,7 @@ const port = 3000
 app.use((req, res, next) => {
   console.log('有訊息進入');
   let date = new Date
-  console.log(`${date.toLocaleString()} | GET from ${req.originalUrl}`);
+  console.log(`${date.toLocaleString()} | ${req.method} from ${req.originalUrl}`);
   next();
 })
 
